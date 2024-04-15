@@ -2,7 +2,7 @@
     
     <div id="header">
         
-        <h1><a href="/">E-Book Management System</a></h1>
+        <h1><a href="/">Notera</a></h1>
         
         <ul id="primary-nav">
             
@@ -55,7 +55,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		  
-				<a class="navbar-brand" href="user_dashboard.php">E Book</a>
+				<a class="navbar-brand" href="user_dashboard.php">Notera</a>
 				<li class="nav-item">
               <a class="nav-link active" href="listofbooks.php">List of Books</a>
             </li>
@@ -100,7 +100,7 @@
 
     <div class="pane" id="features" style="display: block;">
 
-      <b>E-Book Management System is a powerful and easy to use e-book manager</b>.
+      <b>Notera is a powerful and easy to use e-book manager</b>.
       It’ll allow to do nearly everything and it
       takes things a step beyond normal e-book software. It’s also <b>completely free</b>
       and <i>open source</i> and great for both <b>casual users</b> and computer experts.
@@ -126,7 +126,7 @@
               impairments or reading difficulties to enjoy the content.
 
             <p>4. Search and navigation: E-books come with search functionality, allowing you to quickly find specific
-              words, phrases, or sections within the book. You can also navigate through the content using bookmarks,
+              words, phrases, or sections within thNotera. You can also navigate through the content using bookmarks,
               table of contents, or hyperlinks, making it easy to jump between chapters or reference different sections.
 
             <p>5. Interactive features: Some e-books incorporate interactive elements such as hyperlinks, multimedia
@@ -136,7 +136,7 @@
             <p>6. Annotation and highlighting: E-books enable you to highlight text, make annotations, and add
               bookmarks. This feature is particularly useful for studying, research, or keeping track of important
               passages. Some e-book platforms also allow you to share annotations with others or access community
-              discussions related to the book.
+              discussions related to thNotera.
 
             <p>7. Synchronization across devices: Most e-book platforms offer synchronization capabilities, allowing you
               to start reading on one device and continue seamlessly on another. Your bookmarks, annotations, and
@@ -180,7 +180,7 @@
             <p>E-book can convert dozens of file types. No matter
               where you got your e-book from, it’ll be ready for your
               device in no time. When converting, you can also
-              automatically change the book’s style, create a table of
+              automatically change thNotera’s style, create a table of
               contents or improve punctuation and margins. calibre will
               also detect the format that’s best suited for your device
               on its own, so you don’t have to bother.</p>
@@ -188,7 +188,7 @@
             <p>E-book can also turn your personal documents to e-books
               or create them from scratch. It can also take all the
               mundane things that go with it off your plate. It has
-              automatic style helpers and scripts generating the book’s
+              automatic style helpers and scripts generating thNotera’s
               structure. You focus on the content, e-book will take care
               of the rest.</p>
 
@@ -226,7 +226,7 @@
               track which books you’ve read and which ones you liked. You
               can also take advantage of the <b>advanced search and
                 sorting</b> functions that use tags, authors, comments and
-              more. You will find the book you were looking for in seconds!
+              more. You will find thNotera you were looking for in seconds!
             </p>
 
           </div>

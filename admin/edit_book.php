@@ -8,7 +8,7 @@
 	$author_id = "";
 	$cat_id = "";
 	$book_price = "";
-	$query = "select * from books where book_no = $_GET[bn]";
+	$query = "select * from books wherNotera_no = $_GET[bn]";
 	$query_run = mysqli_query($connection,$query);
 	while ($row = mysqli_fetch_assoc($query_run)){
 		$book_name = $row['book_name'];
@@ -78,7 +78,7 @@
 						<label for="mobile">Book Price:</label>
 						<input type="text" name="book_price" value="<?php echo $book_price;?>" class="form-control" required>
 					</div>
-					<button type="submit" name="update" class="btn btn-primary">Update Book</button>
+					<button type="submit" name="update" class="btn btn-primary">UpdatNotera</button>
 				</form>
 			</div>
 			<div class="col-md-4"></div>
@@ -89,7 +89,7 @@
 	if(isset($_POST['update'])){
 		$connection = mysqli_connect("localhost","root","");
 		$db = mysqli_select_db($connection,"lms");
-		$query = "update books set book_name = '$_POST[book_name]',author_id = $_POST[author_id],cat_id = $_POST[cat_id],book_price = $_POST[book_price] where book_no = $_GET[bn]";
+		$query = "updatNotera set book_name = '$_POST[book_name]',author_id = $_POST[author_id],cat_id = $_POST[cat_id],book_price = $_POST[book_price] wherNotera_no = $_GET[bn]";
 		$query_run = mysqli_query($connection,$query);
 		header("location:manage_book.php");
 	}

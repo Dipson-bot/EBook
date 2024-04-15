@@ -51,7 +51,7 @@ if (isset($_GET['pdf']) && isset($_GET['book_id'])) {
     }
 }
 
-//Handle book search
+//HandlNotera search
 $connection = mysqli_connect("localhost", "root", "", "pdfupload");
 if (!$connection) {
     die("Database connection failed: " . mysqli_connect_error());
@@ -99,7 +99,7 @@ if (!$result) {
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <a class="navbar-brand" href="user_dashboard.php">E Book</a>
+                        <a class="navbar-brand" href="user_dashboard.php">Notera</a>
                         <?php
                             // Check if the user is an admin
                             if ($_SESSION['role'] === 'admin') {

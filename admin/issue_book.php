@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Issue Book</title>
+	<title>IssuNotera</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width,intial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1/css/bootstrap.min.css">
   	<script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
@@ -53,7 +53,7 @@
 	        	<div class="dropdown-menu">
 	        		<a class="dropdown-item" href="add_book.php">Add New Book</a>
 	        		<div class="dropdown-divider"></div>
-	        		<a class="dropdown-item" href="manage_book.php">Manage Books</a>
+	        		<a class="dropdown-item" href="manage_book.php">ManageNotera</a>
 	        	</div>
 		      </li>
 		      <li class="nav-item dropdown">
@@ -73,13 +73,13 @@
 	        	</div>
 		      </li>
 	          <li class="nav-item">
-		        <a class="nav-link" href="issue_book.php">Issue Book</a>
+		        <a class="nav-link" href="issue_book.php">IssuNotera</a>
 		      </li>
 		    </ul>
 		</div>
 	</nav><br>
 	<span><marquee>This is library mangement system. Library opens at 8:00 AM and close at 8:00 PM</marquee></span><br><br>
-		<center><h4>Issue Book</h4><br></center>
+		<center><h4>IssuNotera</h4><br></center>
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
@@ -118,7 +118,7 @@
 						<label for="issue_date">Issue Date:</label>
 						<input type="text" name="issue_date" class="form-control" value="<?php echo date("yy-m-d");?>" required>
 					</div>
-					<button type="submit" name="issue_book" class="btn btn-primary">Issue Book</button>
+					<button type="submit" name="issue_book" class="btn btn-primary">IssuNotera</button>
 				</form>
 			</div>
 			<div class="col-md-4"></div>

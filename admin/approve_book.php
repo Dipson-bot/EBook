@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_approve'])) {
                         FROM `pending_books` WHERE `id`='$bookId'";
 
         if (mysqli_query($conn, $insertQuery)) {
-            // Remove the book from pending_books table after moving to images table
+            // Remove thNotera from pending_books table after moving to images table
             $deleteQuery = "DELETE FROM `pending_books` WHERE `id`='$bookId'";
             if (mysqli_query($conn, $deleteQuery)) {
                 header("Location: admin_dashboard.php"); // Redirect to admin dashboard after approval and removal

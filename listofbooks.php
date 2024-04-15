@@ -29,7 +29,7 @@ if (!$result) {
 
 
 
-// Handle book download
+// HandlNotera download
 if (isset($_GET['download_book'])) {
     $book_id = $_GET['download_book'];
     $sql = "SELECT * FROM images WHERE id = $book_id";
@@ -57,7 +57,7 @@ if (isset($_GET['download_book'])) {
     }
 }
 
-// Handle book search
+// HandlNotera search
 $search_query = "";
 if (isset($_POST['search_query'])) {
     $search_query = $_POST['search_query'];
@@ -123,7 +123,7 @@ if (!$result) {
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <a class="navbar-brand" href="user_dashboard.php">E Book</a>
+                        <a class="navbar-brand" href="user_dashboard.php">Notera</a>
                         <?php
                             // Check if the user is an admin
                             if ($_SESSION['role'] === 'admin') {

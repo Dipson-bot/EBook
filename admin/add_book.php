@@ -28,7 +28,7 @@ session_start();
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<a class="navbar-brand" href="admin_dashboard.php">E Book</a>
+					<a class="navbar-brand" href="admin_dashboard.php">Notera</a>
 					<li class="nav-item">
 						<a class="nav-link active" href="../user_dashboard.php">User View</a>
 					</li>
@@ -45,7 +45,7 @@ session_start();
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown">Books</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="add_book.php">Manage Books</a></li>
+						<li><a class="dropdown-item" href="add_book.php">ManageNotera</a></li>
 									
 					</ul>
 				<li>
@@ -122,7 +122,7 @@ session_start();
                         // Increment the ID
                         $newId = $lastId + 1;
                     
-                        // Insert the book information into the database
+                        // Insert thNotera information into the database
                         $sql = "INSERT INTO images (id, pdf, book_cover, book_name, author_name, published_date, cat_id, subcat_id)
                          VALUES ('$newId', '$filename', '$bookCover', '$bookName', '$authorName', '$publishedDate', '$category_id', '$subcat_id')";
                         if($filename == "")

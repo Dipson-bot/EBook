@@ -32,7 +32,7 @@ ini_set('display_errors', 1);
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">E Book Management System</a>
+            <a class="navbar-brand" href="index.php">Notera Management System</a>
         </div>
 
         <ul class="nav navbar-nav navbar-right">

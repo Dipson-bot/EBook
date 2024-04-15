@@ -52,7 +52,7 @@ $queryUser = "SELECT * FROM users WHERE role = 'user'";
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<a class="navbar-brand" href="admin_dashboard.php">E Book</a>
+					<a class="navbar-brand" href="admin_dashboard.php">Notera</a>
 					<li class="nav-item">
 						<a class="nav-link active" href="../user_dashboard.php">User View</a>
 					</li>
@@ -69,7 +69,7 @@ $queryUser = "SELECT * FROM users WHERE role = 'user'";
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown">Books</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="add_book.php">Manage Books</a></li>
+						<li><a class="dropdown-item" href="add_book.php">ManageNotera</a></li>
 									
 					</ul>
 				<li>

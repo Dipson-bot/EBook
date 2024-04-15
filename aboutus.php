@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	//Handle book search
+	//HandlNotera search
   $connection = mysqli_connect("localhost", "root", "", "pdfupload");
   if (!$connection) {
       die("Database connection failed: " . mysqli_connect_error());
@@ -130,7 +130,7 @@
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <a class="navbar-brand" href="user_dashboard.php">E Book</a>
+                        <a class="navbar-brand" href="user_dashboard.php">Notera</a>
                         <?php
                             // Check if the user is an admin
                             if ($_SESSION['role'] === 'admin') {
@@ -184,11 +184,11 @@
           <h1>Our Mission and Values</h1>
           <p>We understand the challenges faced by authors, publishers, and readers in 
             organizing and accessing their digital library, and we are here to simplify the process.</p>
-          <p>At Ebook Management System, we believe in fostering a vibrant community of authors,
+          <p>At Notera Management System, we believe in fostering a vibrant community of authors,
             publishers, and readers. Through our platform, we aim to connect individuals who 
-            share a passion for ebooks, facilitating meaningful interactions, and promoting collaboration.</p>
-            <p>Join us on this exciting journey of transforming the way ebooks are managed and enjoyed. 
-              Whether you are an author, publisher, or avid reader, Ebook Management System is here to simplify 
+            share a passion for Notera, facilitating meaningful interactions, and promoting collaboration.</p>
+            <p>Join us on this exciting journey of transforming the way Notera are managed and enjoyed. 
+              Whether you are an author, publisher, or avid reader, Notera Management System is here to simplify 
               your digital publishing experience.</p>
         </div>
 

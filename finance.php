@@ -23,7 +23,7 @@ $result = mysqli_stmt_get_result($stmt);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Finance Books</title>
+    <title>FinancNotera</title>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -32,7 +32,7 @@ $result = mysqli_stmt_get_result($stmt);
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <a class="navbar-brand" href="user_dashboard.php">E Book</a>
+                    <a class="navbar-brand" href="user_dashboard.php">Notera</a>
                     <li class="nav-item">
                         <a class="nav-link active" href="listofbooks.php">List of Books</a>
                     </li>
@@ -68,7 +68,7 @@ $result = mysqli_stmt_get_result($stmt);
     
     <div class="container col-12 m-5">
         <div class="col-12 m-auto">
-            <h2 class="text-center">Finance Books</h2>
+            <h2 class="text-center">FinancNotera</h2>
     
             <!-- Add a table to display the list of books -->
             <table class="table text-center">

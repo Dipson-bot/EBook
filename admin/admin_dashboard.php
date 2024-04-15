@@ -36,7 +36,7 @@ if (!$pdfUploadConn) {
     die("Connection to pdfupload database failed: " . mysqli_connect_error());
 }
 
-$pdfUploadQuery = "SELECT pb.*, c.cat_name as category_name FROM `pending_books` pb 
+$pdfUploadQuery = "SELECT pb.*, c.cat_name as category_name FROM `pending_Books` pb 
 LEFT JOIN `category` c ON pb.cat_id = c.cat_id";
 
 
@@ -46,11 +46,11 @@ if (!$pdfUploadResult) {
     die("Error executing query: " . mysqli_error($pdfUploadConn));
 }
 
-		// $pdfUploadQuery = "SELECT * FROM `pending_books`";
+		// $pdfUploadQuery = "SELECT * FROM `pending_Books`";
 		// $pdfUploadResult = mysqli_query($pdfUploadConn, $pdfUploadQuery);
 
-		// Count the number of pending books
-		$countPendingBooksQuery = "SELECT COUNT(*) as total FROM `pending_books`";
+		// Count the number of pending Books
+		$countPendingBooksQuery = "SELECT COUNT(*) as total FROM `pending_Books`";
 		$countPendingBooksResult = mysqli_query($pdfUploadConn, $countPendingBooksQuery);
 		$countPendingBooks = mysqli_fetch_assoc($countPendingBooksResult)['total'];
 
@@ -128,7 +128,7 @@ if (!$pdfUploadResult) {
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown">Books</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="add_book.php">ManageNotera</a></li>
+						<li><a class="dropdown-item" href="add_book.php">Manage Notera</a></li>
 									
 					</ul>
 				<li>
@@ -138,7 +138,10 @@ if (!$pdfUploadResult) {
 						<li><a class="dropdown-item" href="add_cat.php">Add New Category</a></li>
 									<div class="dropdown-divider"></div>
 						<li?><a class="dropdown-item" href="manage_cat.php">Manage Category</a></li>
-									
+                                    <div class="dropdown-divider"></div>
+                        <li?><a class="dropdown-item" href="add_subcat.php">Add Sub Category</a></li>	
+                                    <div class="dropdown-divider"></div>		
+                        <li?><a class="dropdown-item" href="manage_subcat.php">Manage Sub Category</a></li>
 					</ul>
 				<li>
 
@@ -165,8 +168,8 @@ if (!$pdfUploadResult) {
                 <div class="card">
                     <div class="card-header">Total Book</div>
                     <div class="card-body">
-                        <p class="card-text">No of books available: <?php echo get_book_count();?></p>
-                        <a class="btn btn-success" href="Regbooks.php">View All Books</a>
+                        <p class="card-text">No of Books available: <?php echo get_book_count();?></p>
+                        <a class="btn btn-success" href="RegBooks.php">View All Books</a>
                     </div>
                 </div>
             </div>
@@ -183,7 +186,7 @@ if (!$pdfUploadResult) {
                 <div class="card">
                     <div class="card-header">Pending Books</div>
                     <div class="card-body">
-                        <p class="card-text">No. of books pending: <?php echo $countPendingBooks; ?></p>
+                        <p class="card-text">No. of Books pending: <?php echo $countPendingBooks; ?></p>
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pendingBooksModal">View Pending Books</button>
                     </div>
                 </div>
@@ -244,7 +247,7 @@ if (!$pdfUploadResult) {
     </div>
 </div>
 
-<!-- Modal to display pending books -->
+<!-- Modal to display pending Books -->
 <div class="modal fade" id="pendingBooksModal" tabindex="-1" aria-labelledby="pendingBooksModalLabel"
         aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -270,7 +273,7 @@ if (!$pdfUploadResult) {
                     <tbody>
                         <?php
                         while ($fetch = mysqli_fetch_assoc($pdfUploadResult)) {
-                           // Inside the loop fetching pending books
+                           // Inside the loop fetching pending Books
                             $userId = $fetch['user_id'];
                             $userQuery = "SELECT name FROM users WHERE id = '$userId'";
                             $userResult = mysqli_query($pdfUploadConn, $userQuery);

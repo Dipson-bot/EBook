@@ -45,7 +45,7 @@ if (!isset($_SESSION['id'])) {
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown">Books</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="add_book.php">ManageNotera</a></li>
+						<li><a class="dropdown-item" href="add_book.php">Manage Notera</a></li>
 									
 					</ul>
 				<li>
@@ -87,7 +87,7 @@ if (!isset($_SESSION['id'])) {
             <h2 class="text-center">List of Books</h2>
 			<br>
 
-            <!-- Add a table to display the list of books -->
+            <!-- Add a table to display the list of Books -->
             <table class="table text-center">
                 <tr>
                     

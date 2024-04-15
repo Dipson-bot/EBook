@@ -84,7 +84,7 @@ if (isset($_POST['update'])) {
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown">Books</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="add_book.php">ManageNotera</a></li>
+						<li><a class="dropdown-item" href="add_book.php">Manage Notera</a></li>
 									
 					</ul>
 				<li>
@@ -94,7 +94,10 @@ if (isset($_POST['update'])) {
 						<li><a class="dropdown-item" href="add_cat.php">Add New Category</a></li>
 									<div class="dropdown-divider"></div>
 						<li?><a class="dropdown-item" href="manage_cat.php">Manage Category</a></li>
-									
+                                    <div class="dropdown-divider"></div>
+                        <li?><a class="dropdown-item" href="add_subcat.php">Add Sub Category</a></li>	
+                                    <div class="dropdown-divider"></div>		
+                        <li?><a class="dropdown-item" href="manage_subcat.php">Manage Sub Category</a></li>
 					</ul>
 				<li>
 
@@ -104,7 +107,7 @@ if (isset($_POST['update'])) {
 				</ul>
 			</div>
 		</div>
-</nav><br>
+	</nav><br>
 
 <div class="container mt-4">
     <div class="row justify-content-center">

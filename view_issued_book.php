@@ -6,7 +6,7 @@
 	$book_name = "";
 	$author = "";
 	$book_no = "";
-	$query = "select book_name,book_author,book_no from issued_books where student_id = $_SESSION[id] and status = 1";
+	$query = "select book_name,book_author,book_no from issued_Books where student_id = $_SESSION[id] and status = 1";
 ?>
 <!DOCTYPE html>
 <html>

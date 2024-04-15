@@ -57,7 +57,7 @@ if (!$result) {
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         
-    <title>Upload PDF</title>
+    <title>Upload Books</title>
     
 </head>
 
@@ -77,7 +77,7 @@ if (!$result) {
                             }
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="listofbooks.php">List of Books</a>
+                            <a class="nav-link active" href="listofBooks.php">List of Books</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -97,7 +97,7 @@ if (!$result) {
                                 <li class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="downloads.php">Downloads</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="uploadpdf.php">Upload pdf</a></li>
+                                <li><a class="dropdown-item" href="uploadpdf.php">Upload Books</a></li>
                             </ul>
                         </li>
 
@@ -109,7 +109,7 @@ if (!$result) {
                     
 
                     <!-- Search bar -->
-                    <form class="d-flex" action="listofbooks.php" method="post">
+                    <form class="d-flex" action="listofBooks.php" method="post">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_query" value="<?php echo $search_query; ?>">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
@@ -156,7 +156,7 @@ if (!$result) {
                         // $row = mysqli_fetch_assoc($result);
                         // $category_id = $row['cat_id'];
                         // Get the last ID from the database
-                        $lastIdQuery = "SELECT MAX(id) AS max_id FROM pending_books";
+                        $lastIdQuery = "SELECT MAX(id) AS max_id FROM pending_Books";
                         $result = mysqli_query($con, $lastIdQuery);
                         if ($result) {
                             // Success
@@ -170,7 +170,7 @@ if (!$result) {
 
                         // Increment the ID
                         $newId = $lastId + 1;
-                        $sql = "INSERT INTO pending_books (id, user_id, pdf, book_cover, book_name, author_name, published_date, cat_id, subcat_id) 
+                        $sql = "INSERT INTO pending_Books (id, user_id, pdf, book_cover, book_name, author_name, published_date, cat_id, subcat_id) 
                                 VALUES ('$newId', '$user_id', '$filename', '$bookCover', '$bookName', '$authorName', '$publishedDate', '$category_id', '$subcat_id')";
                         if ($filename == "") {
                             echo "<div class='alert alert-danger' role='alert'>
@@ -182,7 +182,7 @@ if (!$result) {
                                 move_uploaded_file($tempfile, $folder);
                                 move_uploaded_file($bookCoverTemp, "admin/book_covers/" . $bookCover);
                                 echo "<div class='alert alert-success' role='alert'>
-                                <h4 class='text-center'>PDF uploaded. Waiting for admin approval.</h4>
+                                <h4 class='text-center'>Note uploaded. Waiting for admin approval.</h4>
                                 </div>";
                             } else {
                                 echo "Error: " . mysqli_error($con);
@@ -195,7 +195,7 @@ if (!$result) {
                 }
             }
          ?>   
-        <h2 class="text-center">Upload PDF</h2>
+        <h2 class="text-center">Upload Books</h2>
         <form action="" method="post" class="form-control" enctype="multipart/form-data">
             <input type="file" class="form-control" name="choosefile" required>
             <input type="file" class="form-control" name="bookcover" accept="image/*" required>

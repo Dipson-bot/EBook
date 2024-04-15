@@ -12,11 +12,11 @@ if (!$conn) {
 if (isset($_GET['category'])) {
     $selectedCategory = urldecode($_GET['category']);
     // echo "Selected Category ID: " . $selectedCategory; 
-    // Query to fetch books based on the selected category (assuming cat_id is the correct column name)
+    // Query to fetch Books based on the selected category (assuming cat_id is the correct column name)
     $sql = "SELECT * FROM images WHERE cat_id = '$selectedCategory'";
     // echo "SQL Query: " . $sql;
 } else {
-    // Default query to fetch all books if no category is selected
+    // Default query to fetch all Books if no category is selected
     $sql = "SELECT * FROM images";
 }
 
@@ -72,7 +72,7 @@ if (isset($_POST['search_query'])) {
             OR images.author_name LIKE '%$search_query%'
             ORDER BY images.date_added DESC";
 } else if (isset($_GET['category'])) {
-    // Modify the SQL query to select books from a specific category
+    // Modify the SQL query to select Books from a specific category
     $selectedCategory = $_GET['category'];
     $sql = "SELECT images.*, category.cat_name, subcategory.subcat_name
             FROM images
@@ -133,7 +133,7 @@ if (!$result) {
                             }
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="listofbooks.php">List of Books</a>
+                            <a class="nav-link active" href="listofBooks.php">List of Books</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -153,7 +153,7 @@ if (!$result) {
                                 <li class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="downloads.php">Downloads</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="uploadpdf.php">Upload pdf</a></li>
+                                <li><a class="dropdown-item" href="uploadpdf.php">Upload Books</a></li>
                             </ul>
                         </li>
 
@@ -165,7 +165,7 @@ if (!$result) {
                     
 
                     <!-- Search bar -->
-                    <form class="d-flex" action="listofbooks.php" method="post">
+                    <form class="d-flex" action="listofBooks.php" method="post">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_query" value="<?php echo $search_query; ?>">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
@@ -177,7 +177,7 @@ if (!$result) {
     <div class="col-12 m-auto">
         <h2 class="text-center">List of Books</h2>
 
-        <!-- Add a table to display the list of books -->
+        <!-- Add a table to display the list of Books -->
         <table class="table text-center">
             <tr>
                 <th>Book Cover</th>

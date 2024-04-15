@@ -21,8 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_reject'])) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    // Delete thNotera entry from the pending_books table
-    $deleteQuery = "DELETE FROM `pending_books` WHERE `id`='$bookId'";
+    // Delete thNotera entry from the pending_Books table
+    $deleteQuery = "DELETE FROM `pending_Books` WHERE `id`='$bookId'";
     if (mysqli_query($conn, $deleteQuery)) {
         header("Location: admin_dashboard.php"); // Redirect to admin dashboard after rejection
         exit();

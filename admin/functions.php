@@ -47,7 +47,7 @@
 		$connection = mysqli_connect("localhost","root","");
 		$db = mysqli_select_db($connection,"lms");
 		$issue_book_count = 0;
-		$query = "select count(*) as issue_book_count from issued_books";
+		$query = "select count(*) as issue_book_count from issued_Books";
 		$query_run = mysqli_query($connection,$query);
 		while ($row = mysqli_fetch_assoc($query_run)){
 			$issue_book_count = $row['issue_book_count'];
@@ -88,13 +88,13 @@
 		return $downloads_count;
 	}
 	
-	function get_downloaded_books(){
+	function get_downloaded_Books(){
 		$connection = mysqli_connect("localhost", "root", "", "pdfupload");
 	
 		// Check if user is logged in and user ID is set in the session
 		if (isset($_SESSION['id']) && $_SESSION['id'] > 0) {
 			$user_id = $_SESSION['id'];
-			$books = array();
+			$Books = array();
 			$query = "SELECT images.id, images.pdf, images.book_name, images.author_name, downloads.download_date 
 					  FROM downloads 
 					  INNER JOIN images ON downloads.book_id = images.id 
@@ -102,9 +102,9 @@
 					  ORDER BY downloads.download_date DESC";
 			$query_run = mysqli_query($connection, $query);
 			while ($row = mysqli_fetch_assoc($query_run)) {
-				$books[] = $row;
+				$Books[] = $row;
 			}
-			return $books;
+			return $Books;
 		} else {
 			// Handle the case where the user is not logged in or session variable is not set
 			return array(); // Return an empty array or handle the situation accordingly

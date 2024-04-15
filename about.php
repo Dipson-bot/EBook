@@ -29,7 +29,7 @@
 		$connection = mysqli_connect("localhost","root","");
 		$db = mysqli_select_db($connection,"lms");
 		$user_issue_book_count = 0;
-		$query = "select count(*) as user_issue_book_count from issued_books where student_id = $_SESSION[id]";
+		$query = "select count(*) as user_issue_book_count from issued_Books where student_id = $_SESSION[id]";
 		$query_run = mysqli_query($connection,$query);
 		while ($row = mysqli_fetch_assoc($query_run)){
 			$user_issue_book_count = $row['user_issue_book_count'];
@@ -57,7 +57,7 @@
 		  
 				<a class="navbar-brand" href="user_dashboard.php">Notera</a>
 				<li class="nav-item">
-              <a class="nav-link active" href="listofbooks.php">List of Books</a>
+              <a class="nav-link active" href="listofBooks.php">List of Books</a>
             </li>
             <li class="nav-item ">
               <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -111,29 +111,29 @@
           <div class="feature-description">
 
             An e-book, short for electronic book, is a digital version of a printed book that can be read on electronic
-            devices such as e-readers, tablets, smartphones, or computers. Here are some key features of e-books:<p>
+            devices such as e-readers, tablets, smartphones, or computers. Here are some key features of e-Books:<p>
 
-            <p>1. Portability: E-books allow you to carry an entire library with you in a single device. You can store
-              hundreds or even thousands of books on a small electronic device, making it convenient for traveling or
+            <p>1. Portability: E-Books allow you to carry an entire library with you in a single device. You can store
+              hundreds or even thousands of Books on a small electronic device, making it convenient for traveling or
               reading on the go.
 
-            <p>2. Accessibility: E-books are easily accessible, as you can purchase and download them instantly from
-              online stores. There is no need to visit a physical bookstore or wait for shipping. Many classic and
-              public domain books are also available for free online.
+            <p>2. Accessibility: E-Books are easily accessible, as you can purchase and download them instantly from
+              online stores. There is no need to visit a physical Bookstore or wait for shipping. Many classic and
+              public domain Books are also available for free online.
 
-            <p>3. Adjustable text and font size: E-books offer customizable reading experiences. You can change the font
+            <p>3. Adjustable text and font size: E-Books offer customizable reading experiences. You can change the font
               size, style, and background color to suit your preferences, making it easier for people with visual
               impairments or reading difficulties to enjoy the content.
 
-            <p>4. Search and navigation: E-books come with search functionality, allowing you to quickly find specific
+            <p>4. Search and navigation: E-Books come with search functionality, allowing you to quickly find specific
               words, phrases, or sections within thNotera. You can also navigate through the content using bookmarks,
               table of contents, or hyperlinks, making it easy to jump between chapters or reference different sections.
 
-            <p>5. Interactive features: Some e-books incorporate interactive elements such as hyperlinks, multimedia
+            <p>5. Interactive features: Some e-Books incorporate interactive elements such as hyperlinks, multimedia
               content (images, audio, videos), and interactive quizzes. These features enhance the reading experience by
               providing additional context, explanations, or interactive learning opportunities.
 
-            <p>6. Annotation and highlighting: E-books enable you to highlight text, make annotations, and add
+            <p>6. Annotation and highlighting: E-Books enable you to highlight text, make annotations, and add
               bookmarks. This feature is particularly useful for studying, research, or keeping track of important
               passages. Some e-book platforms also allow you to share annotations with others or access community
               discussions related to thNotera.
@@ -142,11 +142,11 @@
               to start reading on one device and continue seamlessly on another. Your bookmarks, annotations, and
               reading progress are synced across devices, ensuring a consistent reading experience.
 
-            <p>8. Eco-friendly and space-saving: E-books contribute to environmental sustainability by reducing paper
+            <p>8. Eco-friendly and space-saving: E-Books contribute to environmental sustainability by reducing paper
               usage and the carbon footprint associated with traditional book publishing. They also save physical space,
-              as you don't need shelves or storage for a large collection of books.
+              as you don't need shelves or storage for a large collection of Books.
 
-            <p>Overall, e-books offer convenience, flexibility, and a range of features that enhance the reading
+            <p>Overall, e-Books offer convenience, flexibility, and a range of features that enhance the reading
               experience in the digital age.
 
 
@@ -164,7 +164,7 @@
 
             <p>E-book supports almost <b>every single e-reader</b> and
               is compatible with more devices with every update. You can
-              transfer your e-books from one device to another in
+              transfer your e-Books from one device to another in
               seconds, <b>wirelessly</b> or with a cable. And you don’t
               need any additional tools to do that. calibre will send the
               <b>best file format</b> for your device converting it if
@@ -175,7 +175,7 @@
               got you covered. If you’re traveling and don’t have
               your device with you – you can take calibre on a USB stick
               and <b>use it wherever you are</b>. Or run the calibre Content server and read
-              your books anywhere, on any device.</p>
+              your Books anywhere, on any device.</p>
 
             <p>E-book can convert dozens of file types. No matter
               where you got your e-book from, it’ll be ready for your
@@ -185,7 +185,7 @@
               also detect the format that’s best suited for your device
               on its own, so you don’t have to bother.</p>
 
-            <p>E-book can also turn your personal documents to e-books
+            <p>E-book can also turn your personal documents to e-Books
               or create them from scratch. It can also take all the
               mundane things that go with it off your plate. It has
               automatic style helpers and scripts generating thNotera’s
@@ -223,7 +223,7 @@
               for an e-book (things like title, author, publisher, ISBN,
               tags, cover or summary) but will also allow you to edit or
               create metadata in existing or new fields. That way you can
-              track which books you’ve read and which ones you liked. You
+              track which Books you’ve read and which ones you liked. You
               can also take advantage of the <b>advanced search and
                 sorting</b> functions that use tags, authors, comments and
               more. You will find thNotera you were looking for in seconds!

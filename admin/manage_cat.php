@@ -75,7 +75,7 @@ while ($row = mysqli_fetch_assoc($query_run)) {
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown">Books</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="add_book.php">ManageNotera</a></li>
+						<li><a class="dropdown-item" href="add_book.php">Manage Notera</a></li>
 									
 					</ul>
 				<li>

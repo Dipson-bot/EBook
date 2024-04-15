@@ -21,23 +21,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_approve'])) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    // Fetch data from pending_books table based on book_id
-    $selectQuery = "SELECT * FROM pending_books WHERE id='$bookId'";
+    // Fetch data from pending_Books table based on book_id
+    $selectQuery = "SELECT * FROM pending_Books WHERE id='$bookId'";
     $selectResult = mysqli_query($conn, $selectQuery);
 
     if ($selectResult && mysqli_num_rows($selectResult) > 0) {
         $row = mysqli_fetch_assoc($selectResult);
         $categoryId = $row['cat_id'];
-        $subcategoryId = $row['subcat_id']; // Fetch subcat_id from pending_books table
+        $subcategoryId = $row['subcat_id']; // Fetch subcat_id from pending_Books table
 
         // Insert data into images table with subcat_id
         $insertQuery = "INSERT INTO `images` (`pdf`, `book_name`, `author_name`, `published_date`, `book_cover`, `cat_id`, `subcat_id`)
                         SELECT `pdf`, `book_name`, `author_name`, `published_date`, `book_cover`, '$categoryId', '$subcategoryId' 
-                        FROM `pending_books` WHERE `id`='$bookId'";
+                        FROM `pending_Books` WHERE `id`='$bookId'";
 
         if (mysqli_query($conn, $insertQuery)) {
-            // Remove thNotera from pending_books table after moving to images table
-            $deleteQuery = "DELETE FROM `pending_books` WHERE `id`='$bookId'";
+            // Remove thNotera from pending_Books table after moving to images table
+            $deleteQuery = "DELETE FROM `pending_Books` WHERE `id`='$bookId'";
             if (mysqli_query($conn, $deleteQuery)) {
                 header("Location: admin_dashboard.php"); // Redirect to admin dashboard after approval and removal
                 exit();

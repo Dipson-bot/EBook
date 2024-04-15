@@ -11,7 +11,7 @@ session_start();
 <html lang="en">
     <head>
         
-        <title>Add PDF</title>
+        <title>Add Books</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -45,7 +45,7 @@ session_start();
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown">Books</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="add_book.php">ManageNotera</a></li>
+						<li><a class="dropdown-item" href="add_book.php">Manage Notera</a></li>
 									
 					</ul>
 				<li>
@@ -55,7 +55,10 @@ session_start();
 						<li><a class="dropdown-item" href="add_cat.php">Add New Category</a></li>
 									<div class="dropdown-divider"></div>
 						<li?><a class="dropdown-item" href="manage_cat.php">Manage Category</a></li>
-									
+                                    <div class="dropdown-divider"></div>
+                        <li?><a class="dropdown-item" href="add_subcat.php">Add Sub Category</a></li>	
+                                    <div class="dropdown-divider"></div>		
+                        <li?><a class="dropdown-item" href="manage_subcat.php">Manage Sub Category</a></li>
 					</ul>
 				<li>
 
@@ -63,13 +66,9 @@ session_start();
 					<a class="nav-link" href="../logout.php">Logout</a>
 				</li>
 				</ul>
-                <form class="d-flex ms-auto" action="" method="post">
-                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search_query">
-                    <button class="btn btn-outline-success" type="submit" name="btn_search">Search</button>
-                </form>
 			</div>
 		</div>
-    </nav>
+	</nav><br>
         
     <!-- Rest of your HTML code -->
     <br>
@@ -83,8 +82,8 @@ session_start();
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_img']))
             {
                 $con = mysqli_connect("localhost","root","","pdfupload");
-                $filename = $_FILES["choosefile"]["name"];
-                $tempfile = $_FILES["choosefile"]["tmp_name"];
+                $filename = $_FILES["choosenote"]["name"];
+                $tempfile = $_FILES["choosenote"]["tmp_name"];
                 $folder = "pdf/".$filename;
                 $bookCover = $_FILES["bookcover"]["name"]; // Add book cover field
                 $bookCoverTemp = $_FILES["bookcover"]["tmp_name"]; // Temporary file for book cover
@@ -190,7 +189,7 @@ session_start();
             
         <!-- Rest of your HTML code -->
             
-            <!-- Table to display filtered books -->
+            <!-- Table to display filtered Books -->
 <div class="container col-12 m-5">
     <div class="col-12 m-auto">
         <h2 class="text-center">List of Books</h2>
@@ -212,7 +211,7 @@ session_start();
             if (isset($_POST['btn_search'])) {
                 $searchQuery = $_POST['search_query'];
 
-                // Create an SQL query to filter books based on the search query for book name or category
+                // Create an SQL query to filter Books based on the search query for book name or category
                 $sql2 = "SELECT i.id, i.pdf, i.book_cover, i.book_name, i.author_name, i.published_date, c.cat_name, s.subcat_name 
                         FROM images i 
                         INNER JOIN category c ON i.cat_id = c.cat_id 
@@ -224,7 +223,7 @@ session_start();
                     die("Query failed: " . mysqli_error($conn));
                 }
             } else {
-                // Default query to display all books
+                // Default query to display all Books
                 $sql2 = "SELECT i.id, i.pdf, i.book_cover, i.book_name, i.author_name, i.published_date, c.cat_name, s.subcat_name 
                         FROM images i 
                         INNER JOIN category c ON i.cat_id = c.cat_id 

@@ -17,7 +17,7 @@ session_start();
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <a class="navbar-brand" href="user_dashboard.php">Notera</a>
                 <li class="nav-item">
-                    <a class="nav-link active" href="listofbooks.php">List of Books</a>
+                    <a class="nav-link active" href="listofBooks.php">List of Books</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["search_query"])) {
         echo '</div>';
     } else {
         echo '<div class="container mt-4">';
-        echo '<div class="alert alert-info text-center" role="alert">No matching books found.</div>';
+        echo '<div class="alert alert-info text-center" role="alert">No matching Books found.</div>';
         echo '</div>';
     }
 

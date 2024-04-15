@@ -7,7 +7,7 @@
 	$author = "";
 	$book_no = "";
 	$student_name = "";
-	$query = "select issued_books.book_name,issued_books.book_author,issued_books.book_no,users.name from issued_books left join users on issued_books.student_id = users.id where issued_books.status = 1";
+	$query = "select issued_Books.book_name,issued_Books.book_author,issued_Books.book_no,users.name from issued_Books left join users on issued_Books.student_id = users.id where issued_Books.status = 1";
 ?>
 <!DOCTYPE html>
 <html>

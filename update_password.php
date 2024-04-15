@@ -84,7 +84,7 @@ if (isset($_POST['update'])) {
 
                 <a class="navbar-brand" href="user_dashboard.php">Notera</a>
                 <li class="nav-item">
-                    <a class="nav-link active" href="listofbooks.php">List of Books</a>
+                    <a class="nav-link active" href="listofBooks.php">List of Books</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link active" href="contact.php">Contact Us</a>

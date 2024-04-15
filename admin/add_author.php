@@ -67,7 +67,7 @@
 	        	<div class="dropdown-menu">
 	        		<a class="dropdown-item" href="add_book.php">Add New Book</a>
 	        		<div class="dropdown-divider"></div>
-	        		<a class="dropdown-item" href="manage_book.php">ManageNotera</a>
+	        		<a class="dropdown-item" href="manage_book.php">Manage Notera</a>
 	        	</div>
 		      </li>
 		      <li class="nav-item dropdown">

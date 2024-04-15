@@ -53,7 +53,7 @@
 	        	<div class="dropdown-menu">
 	        		<a class="dropdown-item" href="add_book.php">Add New Book</a>
 	        		<div class="dropdown-divider"></div>
-	        		<a class="dropdown-item" href="manage_book.php">ManageNotera</a>
+	        		<a class="dropdown-item" href="manage_book.php">Manage Notera</a>
 	        	</div>
 		      </li>
 		      <li class="nav-item dropdown">
@@ -131,7 +131,7 @@
 	{
 		$connection = mysqli_connect("localhost","root","");
 		$db = mysqli_select_db($connection,"lms");
-		$query = "insert into issued_books values(null,$_POST[book_no],'$_POST[book_name]','$_POST[book_author]',$_POST[student_id],1,'$_POST[issue_date]')";
+		$query = "insert into issued_Books values(null,$_POST[book_no],'$_POST[book_name]','$_POST[book_author]',$_POST[student_id],1,'$_POST[issue_date]')";
 		$query_run = mysqli_query($connection,$query);
 		#header("Location:admin_dashboard.php");
 	}

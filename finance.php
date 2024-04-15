@@ -7,7 +7,7 @@ if (!$connection) {
     die("Database connection failed: " . mysqli_connect_error());
 }
 
-// Fetch and display books from the 'finance' category
+// Fetch and display Books from the 'finance' category
 $category = 'finance'; // Replace 'finance' with the category you want to display
 $query = "SELECT * FROM images WHERE cat_id = (SELECT cat_id FROM category WHERE cat_name = ?) ORDER BY date_added DESC";
 $stmt = mysqli_prepare($connection, $query);
@@ -34,7 +34,7 @@ $result = mysqli_stmt_get_result($stmt);
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <a class="navbar-brand" href="user_dashboard.php">Notera</a>
                     <li class="nav-item">
-                        <a class="nav-link active" href="listofbooks.php">List of Books</a>
+                        <a class="nav-link active" href="listofBooks.php">List of Books</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -70,7 +70,7 @@ $result = mysqli_stmt_get_result($stmt);
         <div class="col-12 m-auto">
             <h2 class="text-center">FinancNotera</h2>
     
-            <!-- Add a table to display the list of books -->
+            <!-- Add a table to display the list of Books -->
             <table class="table text-center">
                 <tr>
                     <th>Book Cover</th>

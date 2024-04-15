@@ -94,7 +94,7 @@ if (isset($_POST['search_query'])) {
             OR images.author_name LIKE '%$search_query%'
             ORDER BY images.date_added DESC";
 } else if (isset($_GET['category'])) {
-    // Modify the SQL query to select books from a specific category
+    // Modify the SQL query to select Books from a specific category
     $selectedCategory = $_GET['category'];
     $sql = "SELECT images.*, category.cat_name, subcategory.subcat_name
             FROM images
@@ -246,7 +246,7 @@ if (isset($_POST['search_query'])) {
                             }
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="listofbooks.php">List of Books</a>
+                            <a class="nav-link active" href="listofBooks.php">List of Books</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -266,7 +266,7 @@ if (isset($_POST['search_query'])) {
                                 <li class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="downloads.php">Downloads</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="uploadpdf.php">Upload pdf</a></li>
+                                <li><a class="dropdown-item" href="uploadpdf.php">Upload Books</a></li>
                             </ul>
                         </li>
 
@@ -278,7 +278,7 @@ if (isset($_POST['search_query'])) {
                     
 
                     <!-- Search bar -->
-                    <form class="d-flex" action="listofbooks.php" method="post">
+                    <form class="d-flex" action="listofBooks.php" method="post">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_query" value="<?php echo $search_query; ?>" <?php echo isset($_SESSION['id']) ? '' : 'disabled'; ?>>
                         <button class="btn btn-outline-success" type="submit" <?php echo isset($_SESSION['id']) ? '' : 'disabled'; ?>>Search</button>
                     </form>
@@ -312,7 +312,7 @@ if (isset($_POST['search_query'])) {
 
                                                 foreach ($categories as $categoryId => $category) {
                                                     $color = $colors[$index % count($colors)]; // Get color based on index, cycling through available colors
-                                                    echo '<a href="listofbooks.php?category=' . urlencode($categoryId) . '" class="btn btn-custom" style="background-color: ' . $color . '; color: white;">' . $category . '</a>';
+                                                    echo '<a href="listofBooks.php?category=' . urlencode($categoryId) . '" class="btn btn-custom" style="background-color: ' . $color . '; color: white;">' . $category . '</a>';
                                                     $index++; // Move to the next color for the next category
                                                 }
                                             ?>
@@ -345,7 +345,7 @@ if (isset($_POST['search_query'])) {
 
                                                 foreach ($categories as $categoryId => $category) {
                                                     $color = $colors[$index % count($colors)]; // Get color based on index, cycling through available colors
-                                                    echo '<a href="listofbooks.php?category=' . urlencode($categoryId) . '" class="btn btn-custom" style="background-color: ' . $color . '; color: white;">' . $category . '</a>';
+                                                    echo '<a href="listofBooks.php?category=' . urlencode($categoryId) . '" class="btn btn-custom" style="background-color: ' . $color . '; color: white;">' . $category . '</a>';
                                                     $index++; // Move to the next color for the next category
                                                 }
                                             ?>
@@ -376,7 +376,7 @@ if (isset($_POST['search_query'])) {
 
                                                 foreach ($categories as $categoryId => $category) {
                                                     $color = $colors[$index % count($colors)]; // Get color based on index, cycling through available colors
-                                                    echo '<a href="listofbooks.php?category=' . urlencode($categoryId) . '" class="btn btn-custom" style="background-color: ' . $color . '; color: white;">' . $category . '</a>';
+                                                    echo '<a href="listofBooks.php?category=' . urlencode($categoryId) . '" class="btn btn-custom" style="background-color: ' . $color . '; color: white;">' . $category . '</a>';
                                                     $index++; // Move to the next color for the next category
                                                 }
                                             ?>
@@ -403,7 +403,7 @@ if (isset($_POST['search_query'])) {
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="about.php">About</a></li>
-                    <li class="breadcrumb-item"><a href="https://drive.google.com/drive/u/3/folders/1__CTIwLvJOsouCck5AxuGNMANst8zxNF" target="_blank">Engineering Notes</a></li>
+                    <li class="breadcrumb-item"><a href="https://drive.google.com/drive/u/3/folders/1__CTIwLvJOsouCck5AxuGNMANst8zxNF" target="_blank">Engineering Books</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Updates<span class="badge rounded-pill text-bg-danger">Unavailable</span></li>
                 </ol>
             </nav>

@@ -101,7 +101,7 @@ if (!$result) {
                             }
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="listofbooks.php">List of Books</a>
+                            <a class="nav-link active" href="listofBooks.php">List of Books</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" href="contact.php">Contact Us</a>
@@ -121,7 +121,7 @@ if (!$result) {
                                 <li class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="downloads.php">Downloads</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="uploadpdf.php">Upload pdf</a></li>
+                                <li><a class="dropdown-item" href="uploadpdf.php">Upload Books</a></li>
                             </ul>
                         </li>
 
@@ -133,7 +133,7 @@ if (!$result) {
                     
 
                     <!-- Search bar -->
-                    <form class="d-flex" action="listofbooks.php" method="post">
+                    <form class="d-flex" action="listofBooks.php" method="post">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_query" value="<?php echo $search_query; ?>">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>

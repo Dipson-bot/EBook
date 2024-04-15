@@ -84,7 +84,7 @@
                     <img src="1.jpeg" class="d-block w-100" alt="...">
                     <div class="overlay"></div>
                     <div class="carousel-caption d-none d-md-block text-light custom-caption">
-                        <h1>Welcome to E-books</h1>
+                        <h1>Welcome to E-Books</h1>
                         <p>Please login to use all features</p>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.php">About</a></li>
-                <li class="breadcrumb-item"><a href="unregisteredpage.php" target="_blank">Engineering Notes</a></li>
+                <li class="breadcrumb-item"><a href="unregisteredpage.php" target="_blank">Engineering Books</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Updates<span
                         class="badge rounded-pill text-bg-danger">Unavailable</span></li>
             </ol>
